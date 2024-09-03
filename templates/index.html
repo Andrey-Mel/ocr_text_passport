@@ -1,0 +1,18 @@
+<html >
+<head>
+  <title>Machine Learning Model Deployment</title>
+</head>
+<body>
+ <div>
+    <h1>Predict Iris Species</h1>
+    <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+      <label for="file">Выберите файл:</label>
+      <input type="file" id="file" name="file" required>
+      <br>
+      <button type="submit">Predict</button>
+    </form>
+   <br>
+   {{ prediction_text }}
+ </div>
+</body>
+</html>
