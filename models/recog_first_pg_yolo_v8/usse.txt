@@ -1,0 +1,27 @@
+%pip install ultralystics
+
+import ultralystics
+from ultralystics import YOLO
+ultralystics.checks
+
+
+best_path_weights = r'C:\ml\Codes\RECOG_DOCS\ready_project\recog_first_pg_yolo_v8\best.pt'
+model = YOLO(best_path_weights)
+
+path_1_img = r'C:\ml\db\OCR_DOC\all_pasports\passports\9\p3.jpg'
+# Предикт 
+res = model_pr_yolo.predict(path_1_img, conf=0.90, save_txt=False, save=False)
+# Сохранение анностации в текстовом файле вместе с confidence коэффициентом
+res[0].save_txt(r'C:\ml\db\OCR_DOC\all_pasports\passports\9\9.txt', save_conf=True)
+# Сохранение изображения по предсказаному б.б.
+res[0].save_crop(save_dir = r'C:\ml\db\OCR_DOC\all_pasports\passports\9', file_name='9.jpg')
+# len(res)
+
+
+
+
+# CLI
+#predict yolo cli
+!yolo task=detect mode=predict model=runs/detect/train5/weights/best.pt conf=0.005 source={sourcet}
+# Лучшие веса для определения первой страницы паспорта находятся - runs/detect/train5/weights/best.pt
+# Применить: model_8n_first = YOLO("weight_yolo\\yolov8n.pt")
