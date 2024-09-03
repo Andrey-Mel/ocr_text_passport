@@ -17,4 +17,4 @@ After the release of the CRAFT model, we have separate images of words for each 
  
 USE.
 
-If you run it for local testing, then you need to open the laptop base_line.ipynb, if you look at the results in the browser, you need to run the python file app.py . But since I am not a frontend developer, there is no beautiful interface in the browser, there is only a photo search button and a predict button.
+If you look at the results in the browser, you need to run the python file app.py . But since I am not a frontend developer, there is no beautiful interface in the browser, there is only a photo search button and a predict button.
